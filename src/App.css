@@ -2,37 +2,134 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.bg-body-tertiary {
+  background-color: hsla(0, 0%, 100%, 0.692) !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show,
+.nav-link,
+.navbar-brand {
   color: white;
+  font-family: 'Times New Roman', Times, serif;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-outline-success {
+  --bs-btn-color: rgb(0, 0, 0);
+  --bs-btn-border-color: #000000;
+  --bs-btn-hover-bg: #0dada0;
+  font-family: 'Times New Roman', Times, serif;
 }
 
-@keyframes App-logo-spin {
-  from {
+.navbar-toggler {
+  background-color: white;
+  color: #0003;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+  color: rgb(0, 0, 0);
+  text-shadow: 0px 0px 2px rgb(170, 148, 252),0px 0px 2px rgb(143, 103, 255);
+  transform: scale(1.1);
+
+}
+
+.navbar-brand {
+  font-size: 30px;
+  margin: 0px 30px 0px 7px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: hsl(0, 0%, 0%);
+}
+
+/* Add underline effect to nav links */
+.navbar-nav .nav-item .nav-link {
+  position: relative;
+  color: rgb(0, 0, 0);
+}
+
+.navbar-nav .nav-item .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  /* Adjust this value to control the distance from the text */
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(129, 129, 129);
+  /* Adjust the opacity as needed */
+  transform: scaleX(0);
+  transition: transform 0.3s linear;
+}
+
+.navbar-nav .nav-item .nav-link:hover::after,
+.navbar-nav .nav-item .nav-link:focus::after {
+  transform: scaleX(1);
+  width: 100%;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* Make sure the navbar spans the entire width */
+  z-index: 1000;
+  /* Add z-index to ensure the navbar is above other content */
+}
+
+.content {
+  padding-top: 80px;
+  /* Adjust this value to match the height of your navbar */
+}
+
+.cardnews {
+  margin-bottom: 2rem;
+}
+
+.content h1 {
+  color: white;
+  text-shadow: 0px 0px 2px black;
+  margin-bottom: 1.5rem;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+
+  100% {
     transform: rotate(360deg);
   }
 }
