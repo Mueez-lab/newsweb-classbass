@@ -83,5 +83,3 @@ Pull requests are welcome! If you find a bug or have an idea for an improvement,
 This project is open-source and free to use under the [MIT License](LICENSE).
 
 ---
-
-```
